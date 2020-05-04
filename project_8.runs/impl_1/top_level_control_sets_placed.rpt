@@ -1,0 +1,75 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon May  4 03:52:50 2020
+| Host         : MUKHTSA1-WL1 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_level_control_sets_placed.rpt
+| Design       : top_level
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    20 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|    16+ |            8 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             200 |           76 |
+| No           | No                    | Yes                    |             106 |           17 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               2 |            1 |
+| Yes          | No                    | Yes                    |              38 |            5 |
+| Yes          | Yes                   | No                     |             202 |           26 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+-----------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|     Clock Signal     |                             Enable Signal                             |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count |
++----------------------+-----------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|  CLK100MHZ_IBUF_BUFG | U_INPUT_INTERFACE/GEN_SW_DEBOUNCE[15].SW_DEBOUNCE/output_i_1_n_0      |                                                               |                1 |              2 |
+|  CLK100MHZ_IBUF_BUFG | U_INPUT_INTERFACE/BTN_RED/pwm_out_reg                                 | U_INPUT_INTERFACE/BTN_RED/pwm_out_reg_0                       |                1 |              2 |
+|  CLK100MHZ_IBUF_BUFG | U_DATAPATH/U_SAMPLE_RATE_GENERATOR/sample_rate                        | U_INPUT_INTERFACE/BTN_RED/reset                               |                5 |             38 |
+|  CLK100MHZ_IBUF_BUFG | U_INPUT_INTERFACE/BTN_DEBOUNCE/count[0]_i_2_n_0                       | U_INPUT_INTERFACE/BTN_DEBOUNCE/counter_set                    |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG | U_INPUT_INTERFACE/GEN_SW_DEBOUNCE[15].SW_DEBOUNCE/count[0]_i_2__3_n_0 | U_INPUT_INTERFACE/GEN_SW_DEBOUNCE[15].SW_DEBOUNCE/counter_set |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG | U_INPUT_INTERFACE/GEN_SW_DEBOUNCE[3].SW_DEBOUNCE/count[0]_i_2__0_n_0  | U_INPUT_INTERFACE/GEN_SW_DEBOUNCE[3].SW_DEBOUNCE/counter_set  |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG | U_INPUT_INTERFACE/GEN_SW_DEBOUNCE[4].SW_DEBOUNCE/count[0]_i_2__1_n_0  | U_INPUT_INTERFACE/GEN_SW_DEBOUNCE[4].SW_DEBOUNCE/counter_set  |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG | U_INPUT_INTERFACE/GEN_SW_DEBOUNCE[5].SW_DEBOUNCE/count[0]_i_2__2_n_0  | U_INPUT_INTERFACE/GEN_SW_DEBOUNCE[5].SW_DEBOUNCE/counter_set  |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG |                                                                       | U_INPUT_INTERFACE/BTN_RED/reset                               |               17 |            106 |
+|  CLK100MHZ_IBUF_BUFG |                                                                       |                                                               |               76 |            200 |
++----------------------+-----------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+
+
